@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class CharacterBehavior : MonoBehaviour
 {
     public float speed;
     float move = 0f;
-    public Animator animator;
+    private Animator animator;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     //bool inAir;
@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,5 +53,14 @@ public class Movement : MonoBehaviour
         }
         animator.SetBool("InAir", false);
         return false;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "Obstacle")
+        {
+            Time.timeScale = 0;
+            Destroy(this.gameObject);
+        }
     }
 }
