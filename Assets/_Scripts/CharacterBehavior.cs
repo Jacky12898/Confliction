@@ -9,6 +9,9 @@ public class CharacterBehavior : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+
+    int jumps = 1;
+    int tempJumps = 1;
     //bool inAir;
 
     void Start()
@@ -38,9 +41,10 @@ public class CharacterBehavior : MonoBehaviour
             sr.flipX = true;
         }
 
-        if (Input.GetButtonDown("Jump") && !checkInAir())
+        if (Input.GetButtonDown("Jump") && tempJumps != 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, Time.fixedDeltaTime * 600f);
+            tempJumps--;
         }
     }
 
@@ -51,6 +55,7 @@ public class CharacterBehavior : MonoBehaviour
             animator.SetBool("InAir", true);
             return true;
         }
+        tempJumps = jumps;
         animator.SetBool("InAir", false);
         return false;
     }
@@ -61,6 +66,21 @@ public class CharacterBehavior : MonoBehaviour
         {
             Time.timeScale = 0;
             Destroy(this.gameObject);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "PowerUp")
+        {
+            switch (collision.gameObject.name)
+            {
+                case "Wing":
+                    jumps++;
+                    break;
+            }
+
+            Destroy(collision.gameObject);
         }
     }
 }
