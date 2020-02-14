@@ -263,7 +263,7 @@ Transform:
   - {fileID: 1499278307}
   - {fileID: 704581958}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &704581957
 GameObject:
@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 1499278308}
   - component: {fileID: 1499278312}
   - component: {fileID: 1499278311}
+  - component: {fileID: 1499278313}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -1078,7 +1079,7 @@ CompositeCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 348bd7820180f8949b9237d8926330e9, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
@@ -1202,6 +1203,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!251 &1499278313
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499278306}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 1
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1780518816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7549384478823943777, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
@@ -1605,6 +1625,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7549384478823943780, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
+        type: 3}
+      propertyPath: jumpParticles
+      value: 
+      objectReference: {fileID: 7394818335939593756, guid: eedab846e09982b409975f007e7bdb75,
+        type: 3}
     - target: {fileID: 7549384478823943781, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1613,7 +1639,7 @@ PrefabInstance:
     - target: {fileID: 7549384478823943781, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549384478823943781, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
         type: 3}
@@ -1643,7 +1669,7 @@ PrefabInstance:
     - target: {fileID: 7549384478823943781, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7549384478823943781, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
         type: 3}
