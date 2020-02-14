@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CharacterBehavior : MonoBehaviour
 {
+    public bool movement = true;
     public float speed;
+    public GameObject jumpParticles;
+
     float move = 0f;
     private Animator animator;
     private Rigidbody2D rb;
@@ -22,29 +25,39 @@ public class CharacterBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        checkInAir();
-        move = Input.GetAxisRaw("Horizontal") * speed;
-        rb.velocity = new Vector2(move * Time.fixedDeltaTime * speed, rb.velocity.y);
-        animator.SetFloat("Speed", Mathf.Abs(move));
-
-
-        if(move > 0)
+        if(movement == true)
         {
-            if (sr.flipX == true) sr.flipX = false;
-            
-        }
+            checkInAir();
+            move = Input.GetAxisRaw("Horizontal") * speed;
+            rb.velocity = new Vector2(move * Time.fixedDeltaTime * speed, rb.velocity.y);
+            animator.SetFloat("Speed", Mathf.Abs(move));
 
-        else if (move < 0)
-        {
-            sr.flipX = true;
-        }
 
-        if (Input.GetButtonDown("Jump") && tempJumps != 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, Time.fixedDeltaTime * 600f);
-            tempJumps--;
+            if (move > 0)
+            {
+                if (sr.flipX == true) sr.flipX = false;
+            }
+
+            else if (move < 0)
+            {
+                sr.flipX = true;
+            }
+
+            if (Input.GetButtonDown("Jump") && tempJumps != 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, Time.fixedDeltaTime * 600f);
+                if((jumps - tempJumps) != 0)
+                {
+                    GameObject particle = Instantiate<GameObject>(jumpParticles);
+                    Vector3 particleOffset = new Vector3(0, -0.5f, 0);
+                    //particle.transform.position = transform.position + particleOffset;
+                    particle.GetComponent<ParticleSystem>().transform.position = transform.position + particleOffset;
+                    Destroy(particle, 1);
+                }
+                tempJumps--;
+            }
         }
     }
 
