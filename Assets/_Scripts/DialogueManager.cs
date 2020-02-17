@@ -19,13 +19,16 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space))
+            DisplayNextSentence();
+
+        else if (Input.GetKeyDown(KeyCode.Escape))
+            EndDialogue();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         dialogueBox.SetActive(true);
-        Debug.Log(dialogue.ToString());
         nameText.text = dialogue.name;
 
         sentences.Clear();

@@ -1,67 +1,55 @@
 fileFormatVersion: 2
-guid: 1cc8abba371ebeb4d915231bb2bb595f
+guid: b7b130c197c086d42854ca610474eabe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6010472164350404129
-    second: Base_Tileset_0
+      213: 4849162609445079126
+    second: Factory_Tileset_0
   - first:
-      213: 8524858798826627478
-    second: Base_Tileset_1
+      213: -1244504636718514447
+    second: Factory_Tileset_1
   - first:
-      213: -131455041003720966
-    second: Base_Tileset_2
+      213: 2658622510046824991
+    second: Factory_Tileset_2
   - first:
-      213: -1649957671339931186
-    second: Base_Tileset_3
+      213: -8180048404779012571
+    second: Factory_Tileset_3
   - first:
-      213: 8062401840360308652
-    second: Base_Tileset_4
+      213: -7205414367697158072
+    second: Factory_Tileset_4
   - first:
-      213: -8824327604451875660
-    second: Base_Tileset_5
+      213: 6705104897454508883
+    second: Factory_Tileset_5
   - first:
-      213: -9118143091593372852
-    second: Base_Tileset_6
+      213: 3353887290623784376
+    second: Factory_Tileset_6
   - first:
-      213: 8077839748515859881
-    second: Base_Tileset_7
+      213: -8868577185931302938
+    second: Factory_Tileset_7
   - first:
-      213: -1217919002120751579
-    second: Base_Tileset_8
+      213: 425639953947599264
+    second: Factory_Tileset_8
   - first:
-      213: 428570107313701460
-    second: Base_Tileset_9
+      213: 3660025260919900161
+    second: Factory_Tileset_9
   - first:
-      213: -6370863973476515870
-    second: Base_Tileset_10
+      213: 8107055441605063099
+    second: Factory_Tileset_10
   - first:
-      213: 8504831788556253254
-    second: Base_Tileset_11
+      213: 2596264126371562202
+    second: Factory_Tileset_11
   - first:
-      213: -2238351585452196173
-    second: Base_Tileset_12
+      213: 8024801532336346068
+    second: Factory_Tileset_12
   - first:
-      213: -1883555787459387752
-    second: Base_Tileset_13
+      213: 6589610716962107149
+    second: Factory_Tileset_13
   - first:
-      213: -1719214867733414762
-    second: Base_Tileset_14
+      213: 902306514608146349
+    second: Factory_Tileset_14
   - first:
-      213: -5198844697006022499
-    second: Base_Tileset_15
-  - first:
-      213: 8129280123283502665
-    second: Base_Tileset_16
-  - first:
-      213: 3858581259337597177
-    second: Base_Tileset_17
-  - first:
-      213: -5636994431500748852
-    second: Base_Tileset_18
-  - first:
-      213: -3472123760444036313
-    second: Base_Tileset_19
+      213: 9190665174230566775
+    second: Factory_Tileset_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -170,7 +158,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Base_Tileset_0
+      name: Factory_Tileset_0
       rect:
         serializedVersion: 2
         x: 0
@@ -184,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 126aa70b69c796350800000000000000
-      internalID: 6010472164350404129
+      spriteID: 658841a83bfab4340800000000000000
+      internalID: 4849162609445079126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_1
+      name: Factory_Tileset_1
       rect:
         serializedVersion: 2
         x: 32
@@ -205,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691ac6039e16e4670800000000000000
-      internalID: 8524858798826627478
+      spriteID: 1fef01760a1aabee0800000000000000
+      internalID: -1244504636718514447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_2
+      name: Factory_Tileset_2
       rect:
         serializedVersion: 2
         x: 64
@@ -226,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afee901365afc2ef0800000000000000
-      internalID: -131455041003720966
+      spriteID: f1ac23f361355e420800000000000000
+      internalID: 2658622510046824991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_3
+      name: Factory_Tileset_3
       rect:
         serializedVersion: 2
         x: 96
@@ -247,35 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec94a516d3c2a19e0800000000000000
-      internalID: -1649957671339931186
+      spriteID: 52e65abc051aa7e80800000000000000
+      internalID: -8180048404779012571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cafb123e1c763ef60800000000000000
-      internalID: 8062401840360308652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_Tileset_5
+      name: Factory_Tileset_4
       rect:
         serializedVersion: 2
         x: 0
@@ -289,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b4e8fa0cc0b98580800000000000000
-      internalID: -8824327604451875660
+      spriteID: 8404ae9fec9310c90800000000000000
+      internalID: -7205414367697158072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_6
+      name: Factory_Tileset_5
       rect:
         serializedVersion: 2
         x: 32
@@ -310,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4b156e0b29d57180800000000000000
-      internalID: -9118143091593372852
+      spriteID: 35b028a01615d0d50800000000000000
+      internalID: 6705104897454508883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_7
+      name: Factory_Tileset_6
       rect:
         serializedVersion: 2
         x: 64
@@ -331,14 +298,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad81daf3704a1070800000000000000
-      internalID: 8077839748515859881
+      spriteID: 8b5f35e98b66b8e20800000000000000
+      internalID: 3353887290623784376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_8
+      name: Factory_Tileset_7
       rect:
         serializedVersion: 2
         x: 96
@@ -352,35 +319,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 526f461de15191fe0800000000000000
-      internalID: -1217919002120751579
+      spriteID: 6e76e61890c7ce480800000000000000
+      internalID: -8868577185931302938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_9
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 452c8cfed3692f500800000000000000
-      internalID: 428570107313701460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_Tileset_10
+      name: Factory_Tileset_8
       rect:
         serializedVersion: 2
         x: 0
@@ -394,14 +340,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef399c68f42697a0800000000000000
-      internalID: -6370863973476515870
+      spriteID: 0a1a241784d28e500800000000000000
+      internalID: 425639953947599264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_11
+      name: Factory_Tileset_9
       rect:
         serializedVersion: 2
         x: 32
@@ -415,14 +361,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 648785f737b370670800000000000000
-      internalID: 8504831788556253254
+      spriteID: 108461a45950bc230800000000000000
+      internalID: 3660025260919900161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_12
+      name: Factory_Tileset_10
       rect:
         serializedVersion: 2
         x: 64
@@ -436,14 +382,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3be70b2a717cfe0e0800000000000000
-      internalID: -2238351585452196173
+      spriteID: bb1744b98fb028070800000000000000
+      internalID: 8107055441605063099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_13
+      name: Factory_Tileset_11
       rect:
         serializedVersion: 2
         x: 96
@@ -457,35 +403,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89e1ad5adf34cd5e0800000000000000
-      internalID: -1883555787459387752
+      spriteID: ad28773a778c70420800000000000000
+      internalID: 2596264126371562202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_14
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69cfd24cf2f1428e0800000000000000
-      internalID: -1719214867733414762
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_Tileset_15
+      name: Factory_Tileset_12
       rect:
         serializedVersion: 2
         x: 0
@@ -499,14 +424,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d906880fa4ef9d7b0800000000000000
-      internalID: -5198844697006022499
+      spriteID: 4d31be7f972dd5f60800000000000000
+      internalID: 8024801532336346068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_16
+      name: Factory_Tileset_13
       rect:
         serializedVersion: 2
         x: 32
@@ -520,14 +445,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946f4fb833101d070800000000000000
-      internalID: 8129280123283502665
+      spriteID: d0f22a8a800037b50800000000000000
+      internalID: 6589610716962107149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_17
+      name: Factory_Tileset_14
       rect:
         serializedVersion: 2
         x: 64
@@ -541,14 +466,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f00cc3363f6c8530800000000000000
-      internalID: 3858581259337597177
+      spriteID: da74db19ef2a58c00800000000000000
+      internalID: 902306514608146349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_Tileset_18
+      name: Factory_Tileset_15
       rect:
         serializedVersion: 2
         x: 96
@@ -562,29 +487,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc7fa8d3e6f55c1b0800000000000000
-      internalID: -5636994431500748852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_Tileset_19
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72b2a8206d980dfc0800000000000000
-      internalID: -3472123760444036313
+      spriteID: 777019f184dcb8f70800000000000000
+      internalID: 9190665174230566775
       vertices: []
       indices: 
       edges: []

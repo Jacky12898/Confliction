@@ -5,9 +5,10 @@ using UnityEngine;
 public class CharacterBehavior : MonoBehaviour
 {
     public bool movement = true;
+    public bool isAlive = true;
     public float speed;
     public GameObject jumpParticles;
-
+    
     float move = 0f;
     private Animator animator;
     private Rigidbody2D rb;
@@ -24,8 +25,7 @@ public class CharacterBehavior : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         if(movement == true)
         {
@@ -52,7 +52,6 @@ public class CharacterBehavior : MonoBehaviour
                 {
                     GameObject particle = Instantiate<GameObject>(jumpParticles);
                     Vector3 particleOffset = new Vector3(0, -0.5f, 0);
-                    //particle.transform.position = transform.position + particleOffset;
                     particle.GetComponent<ParticleSystem>().transform.position = transform.position + particleOffset;
                     Destroy(particle, 1);
                 }
@@ -73,16 +72,16 @@ public class CharacterBehavior : MonoBehaviour
         return false;
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "Obstacle")
         {
-            Time.timeScale = 0;
-            Destroy(this.gameObject);
+            movement = false;
+            isAlive = false;
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PowerUp")
         {
@@ -94,6 +93,11 @@ public class CharacterBehavior : MonoBehaviour
             }
 
             Destroy(collision.gameObject);
+        }
+
+        else if(collision.gameObject.tag == "Obstacle")
+        {
+            transform.position = GameObject.Find("SpawnPoint").transform.position;
         }
     }
 }
