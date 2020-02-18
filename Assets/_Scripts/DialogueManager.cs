@@ -38,7 +38,9 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         Time.timeScale = 0;
-        GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = false;
+
+        if(GameObject.Find("Player") != null)
+            GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = false;
         DisplayNextSentence();
     }
 
@@ -68,7 +70,8 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         Time.timeScale = 1;
-        GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = true;
+        if (GameObject.Find("Player") != null)
+            GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = true;
         dialogueBox.SetActive(false);
     }
 }

@@ -1540,6 +1540,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deathzone
       objectReference: {fileID: 0}
+    - target: {fileID: 4757199499862087005, guid: e3fe356ec9fd3dc48a3bd972abb24c8a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3fe356ec9fd3dc48a3bd972abb24c8a, type: 3}
 --- !u!1001 &4816521125803296521
@@ -1558,6 +1563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 4816521124589090378, guid: b681d0f577c6df24d92ddd3b1bcf980e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4816521124589090381, guid: b681d0f577c6df24d92ddd3b1bcf980e,
         type: 3}
