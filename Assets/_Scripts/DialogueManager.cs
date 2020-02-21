@@ -8,12 +8,19 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public GameObject dialogueBox;
+    public GameObject choice_1;
+    public GameObject choice_2;
+    public GameObject next;
+    public GameObject skip;
+    public bool dialogueActive = false;
 
     public Queue<string> sentences;
 
     void Start()
     {
         dialogueBox.SetActive(false);
+        choice_1.SetActive(false);
+        choice_2.SetActive(false);
         sentences = new Queue<string>();
     }
 
@@ -35,6 +42,8 @@ public class DialogueManager : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
+            if (sentence.Contains("<"))
+                skip.SetActive(false);
             sentences.Enqueue(sentence);
         }
         Time.timeScale = 0;
@@ -42,6 +51,7 @@ public class DialogueManager : MonoBehaviour
         if(GameObject.Find("Player") != null)
             GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = false;
         DisplayNextSentence();
+        dialogueActive = true;
     }
 
     public void DisplayNextSentence()
@@ -54,7 +64,11 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        if (sentence.Contains("<"))
+            StartCoroutine(PresentChoices(sentence));
+
+        else
+            StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -67,11 +81,46 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    IEnumerator PresentChoices(string sentence)
+    {
+        next.SetActive(false);
+        skip.SetActive(false);
+
+        choice_1.SetActive(true);
+        choice_2.SetActive(true);
+        choice_1.GetComponent<Text>().text = sentence.Substring(1, sentence.IndexOf('/') - 1);
+        choice_2.GetComponent<Text>().text = sentence.Substring(sentence.IndexOf('/') + 1);
+        yield return null;
+    }
+
+    public void Choice_1()
+    {
+        DisplayNextSentence();
+        sentences.Dequeue();
+
+        next.SetActive(true);
+        skip.SetActive(true);
+        choice_1.SetActive(false);
+        choice_2.SetActive(false);
+    }
+
+    public void Choice_2()
+    {
+        sentences.Dequeue();
+        DisplayNextSentence();
+
+        next.SetActive(true);
+        skip.SetActive(true);
+        choice_1.SetActive(false);
+        choice_2.SetActive(false);
+    }
+
     public void EndDialogue()
     {
         Time.timeScale = 1;
         if (GameObject.Find("Player") != null)
             GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = true;
         dialogueBox.SetActive(false);
+        dialogueActive = false;
     }
 }

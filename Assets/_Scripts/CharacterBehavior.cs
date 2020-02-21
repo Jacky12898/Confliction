@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterBehavior : MonoBehaviour
 {
     public bool movement = true;
-    public bool isAlive = true;
     public float speed;
     public GameObject jumpParticles;
     
@@ -76,8 +75,7 @@ public class CharacterBehavior : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "Obstacle")
         {
-            movement = false;
-            isAlive = false;
+            transform.position = GameObject.Find("SpawnPoint").transform.position;
         }
     }
 
