@@ -399,7 +399,7 @@ MonoBehaviour:
     - <Store/House
     - Will do! Follow me!
     - Ok
-  nextScene: SampleScene
+  nextScene: Level S-1
 --- !u!4 &743352898
 Transform:
   m_ObjectHideFlags: 0

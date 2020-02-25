@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb4e5b77a0d81142aae44c87d97f13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1094128574}
   smoothSpeed: 0.2
   offset: {x: 0, y: 0, z: -10}
 --- !u!1001 &520955647
@@ -453,12 +452,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1094128574 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7549384478823943777, guid: 88ceb0b620c7a634b81c2c01ca7a9728,
-    type: 3}
-  m_PrefabInstance: {fileID: 1125333770}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1125333770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -849,6 +842,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2064974771642816003, guid: 7fe915a42f5ea314fae65b8e3a49ecb7,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064974771642816003, guid: 7fe915a42f5ea314fae65b8e3a49ecb7,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064974771642816003, guid: 7fe915a42f5ea314fae65b8e3a49ecb7,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2064974772683162860, guid: 7fe915a42f5ea314fae65b8e3a49ecb7,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -118,9 +118,10 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         Time.timeScale = 1;
-        if (GameObject.Find("Player") != null)
-            GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = true;
+        
         dialogueBox.SetActive(false);
         dialogueActive = false;
+        if (GameObject.Find("Player") != null)
+            GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = true;
     }
 }
