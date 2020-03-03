@@ -76,7 +76,9 @@ public class CharacterBehavior : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "Obstacle")
         {
+            //animator.SetBool("Dead", true);
             transform.position = GameObject.Find("SpawnPoint").transform.position;
+            StartCoroutine(death());
         }
     }
 
@@ -98,5 +100,16 @@ public class CharacterBehavior : MonoBehaviour
         {
             transform.position = GameObject.Find("SpawnPoint").transform.position;
         }
+    }
+
+    IEnumerator death()
+    {
+        movement = false;
+        //animator.SetBool("Dead", true);
+        animator.CrossFade("Player_Death", 0);
+        yield return new WaitForSeconds(1f);
+        movement = true;
+        animator.SetBool("Dead", false);
+        transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 }
