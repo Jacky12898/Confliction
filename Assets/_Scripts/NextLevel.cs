@@ -8,7 +8,8 @@ public class NextLevel : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject player = PlayerStats.p.player;
+        //GameObject player = PlayerStats.p.player;
+        GameObject player = GameObject.Find("Player");
 
         if (gameObject.name.Contains("Cutscene"))
              player.SetActive(false);

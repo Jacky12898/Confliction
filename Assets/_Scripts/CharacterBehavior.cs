@@ -47,7 +47,7 @@ public class CharacterBehavior : MonoBehaviour
 
             if (Input.GetButtonDown("Jump") && tempJumps != 0)
             {
-                rb.velocity = new Vector2(rb.velocity.x, Time.fixedDeltaTime * 600f);
+                rb.velocity = new Vector2(rb.velocity.x, Time.fixedDeltaTime * 620f);
                 if((jumps - tempJumps) != 0)
                 {
                     GameObject particle = Instantiate<GameObject>(jumpParticles);
