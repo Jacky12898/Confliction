@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
@@ -60,6 +61,21 @@ public class CutsceneManager : MonoBehaviour
     public void EndCutscene()
     {
         Time.timeScale = 1;
+        GameObject player = GameObject.Find("Player");
+
+        if (gameObject.name.Contains("Cutscene"))
+            player.SetActive(false);
+
+        else
+        {
+            player.SetActive(true);
+            player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+        }
+
+        GameObject levelName = GameObject.Find("LevelName");
+        if (levelName != null)
+            levelName.GetComponent<Text>().text = gameObject.name;
+
         SceneManager.LoadScene(nextScene);
     }
 }

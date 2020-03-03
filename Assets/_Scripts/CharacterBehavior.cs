@@ -19,6 +19,7 @@ public class CharacterBehavior : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this);
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
