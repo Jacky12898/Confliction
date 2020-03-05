@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: 2b0d6e96fc580b4449d96d5dd46c861a
+guid: 1a3c9073feb46c14199d4b9e08bfc951
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -700145753515148034
-    second: PowerUps_0
+      213: 3592790993271445473
+    second: Red_Ant_0
   - first:
-      213: -1615591449214129068
-    second: PowerUps_1
+      213: 9137576867293147886
+    second: Red_Ant_1
   - first:
-      213: 1487878086579342849
-    second: PowerUps_2
+      213: 551482278302127620
+    second: Red_Ant_2
   - first:
-      213: 8861457236315342646
-    second: PowerUps_3
+      213: 7360975807884951439
+    second: Red_Ant_3
   - first:
-      213: -211879964421701425
-    second: PowerUps_4
+      213: -603526509700324939
+    second: Red_Ant_4
   - first:
-      213: -8240451105425409142
-    second: PowerUps_5
+      213: 6698430516432308350
+    second: Red_Ant_5
+  - first:
+      213: -5777519183472430983
+    second: Red_Ant_0
+  - first:
+      213: 2479136635072300315
+    second: Red_Ant_1
+  - first:
+      213: -7463788512038997280
+    second: Red_Ant_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,75 +137,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PowerUps_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efc3bbe85259846f0800000000000000
-      internalID: -700145753515148034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerUps_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45cee6ff2244499e0800000000000000
-      internalID: -1615591449214129068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerUps_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10e46a39c3106a410800000000000000
-      internalID: 1487878086579342849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerUps_3
+      name: Red_Ant_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,40 +151,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63704ea08683afa70800000000000000
-      internalID: 8861457236315342646
+      spriteID: 970fe1ac9e022dfa0800000000000000
+      internalID: -5777519183472430983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PowerUps_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc04f918b404f0df0800000000000000
-      internalID: -211879964421701425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerUps_5
+      name: Red_Ant_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,8 +172,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8bb420216904ad80800000000000000
-      internalID: -8240451105425409142
+      spriteID: b15442372a9a76220800000000000000
+      internalID: 2479136635072300315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Ant_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e23645a4eb4b6890800000000000000
+      internalID: -7463788512038997280
       vertices: []
       indices: 
       edges: []

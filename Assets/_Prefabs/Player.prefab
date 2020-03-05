@@ -48,7 +48,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a7d61690c84bb944497b23469c0c49cf, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: 1
+  grounded: 1
   speed: 16
   jumpParticles: {fileID: 7394818335939593756, guid: eedab846e09982b409975f007e7bdb75,
     type: 3}

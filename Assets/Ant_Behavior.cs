@@ -24,10 +24,10 @@ public class Ant_Behavior : MonoBehaviour
 
         if (startFlipped)
         {
-            if (vertical)
-                sr.flipY = true;
+            if (!vertical)
+                transform.rotation = new Quaternion(0, 180, 0, 0);
             else
-                sr.flipX = true;
+                transform.rotation = new Quaternion(0, 0, 90, 0);
 
             speed = -speed;
         }
@@ -40,13 +40,13 @@ public class Ant_Behavior : MonoBehaviour
             transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
             if (transform.position.x >= startPos + range)
             {
-                sr.flipX = true;
+                transform.rotation = new Quaternion(0, 0, 0, 0);
                 speed = -Mathf.Abs(speed);
             }
 
             else if (transform.position.x <= startPos - range)
             {
-                sr.flipX = false;
+                transform.rotation = new Quaternion(0, 180, 0, 0);
                 speed = Mathf.Abs(speed);
             }
         }
@@ -56,13 +56,13 @@ public class Ant_Behavior : MonoBehaviour
             transform.position = new Vector2(transform.position.x, transform.position.y + Time.deltaTime * speed);
             if (transform.position.y >= startPos + range)
             {
-                sr.flipY = true;
+                transform.rotation = new Quaternion(0, 0, -90, 0);
                 speed = -Mathf.Abs(speed);
             }
 
             else if (transform.position.y < startPos - range)
             {
-                sr.flipY = false;
+                transform.rotation = new Quaternion(0, 0, 90, 0);
                 speed = Mathf.Abs(speed);
             }
         }

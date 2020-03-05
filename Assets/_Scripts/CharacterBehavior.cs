@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterBehavior : MonoBehaviour
 {
     public bool movement = true;
+    public bool grounded = true;
     public float speed;
     public GameObject jumpParticles;
     
@@ -15,6 +16,8 @@ public class CharacterBehavior : MonoBehaviour
 
     int jumps = 1;
     int tempJumps = 1;
+    int bubbles = 0;
+    int sticks = 0;
     //bool inAir;
 
     void Start()
@@ -65,19 +68,25 @@ public class CharacterBehavior : MonoBehaviour
         if(rb.velocity.y >= 0.01 || rb.velocity.y <= -0.01)
         {
             animator.SetBool("InAir", true);
+            grounded = false;
             return true;
         }
         tempJumps = jumps;
+        grounded = true;
         animator.SetBool("InAir", false);
         return false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag == "Projectile" && bubbles != 0)
         {
-            //animator.SetBool("Dead", true);
-            transform.position = GameObject.Find("SpawnPoint").transform.position;
+            rb.velocity = new Vector2(rb.velocity.x, Time.fixedDeltaTime * 620f);
+            bubbles--;
+        }
+
+        else if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Projectile" || collision.gameObject.tag == "Obstacle")
+        {
             StartCoroutine(death());
         }
     }
@@ -91,6 +100,14 @@ public class CharacterBehavior : MonoBehaviour
                 case "Wing":
                     jumps++;
                     break;
+                case "Stick":
+                    sticks++;
+                    break;
+                case "Bubble":
+                    bubbles++;
+                    break;
+                default:
+                    break;
             }
 
             Destroy(collision.gameObject);
@@ -98,18 +115,18 @@ public class CharacterBehavior : MonoBehaviour
 
         else if(collision.gameObject.tag == "Obstacle")
         {
-            transform.position = GameObject.Find("SpawnPoint").transform.position;
+            StartCoroutine(death());
         }
     }
 
     IEnumerator death()
     {
         movement = false;
-        //animator.SetBool("Dead", true);
-        animator.CrossFade("Player_Death", 0);
-        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0;
+        animator.Play("Player_Death", 0);
+        yield return new WaitForSecondsRealtime(0.5f);
         movement = true;
-        animator.SetBool("Dead", false);
         transform.position = GameObject.Find("SpawnPoint").transform.position;
+        Time.timeScale = 1;
     }
 }
