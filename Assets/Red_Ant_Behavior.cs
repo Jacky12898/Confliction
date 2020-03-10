@@ -5,7 +5,6 @@ using UnityEngine;
 public class Red_Ant_Behavior : MonoBehaviour
 {
     public float speed = 2;
-    public float range;
     public float detectionRange;
     public bool startFlipped;
 
@@ -26,7 +25,7 @@ public class Red_Ant_Behavior : MonoBehaviour
 
     void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) <= detectionRange && player.GetComponent<CharacterBehavior>().grounded)
+        if(Mathf.Abs(transform.position.x - player.transform.position.x) <= detectionRange && transform.position.y + 0.05f >= player.transform.position.y && transform.position.y - 0.05f <= player.transform.position.y && player.GetComponent<CharacterBehavior>().grounded)
         {
             if(player.transform.position.x - transform.position.x > 0)
             {
@@ -39,7 +38,7 @@ public class Red_Ant_Behavior : MonoBehaviour
                 speed = -Mathf.Abs(speed);
             }
                 
-            transform.position = new Vector2(transform.position.x + Time.deltaTime * speed * (1.5f), transform.position.y);
+            transform.position = new Vector2(transform.position.x + Time.deltaTime * speed * (1.75f), transform.position.y);
         }
 
         else
@@ -55,7 +54,7 @@ public class Red_Ant_Behavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Wall")
+        if(collision.gameObject.name != "Ground")
         {
             speed = -speed;
             transform.rotation *= new Quaternion(0, 180, 0, 0);

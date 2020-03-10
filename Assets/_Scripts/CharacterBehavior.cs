@@ -7,24 +7,22 @@ public class CharacterBehavior : MonoBehaviour
     public bool movement = true;
     public bool grounded = true;
     public float speed;
+    public int sticks = 0;
+    public int bubbles = 0;
     public GameObject jumpParticles;
     
     float move = 0f;
-    private Animator animator;
+    public Animator animator;
     private Rigidbody2D rb;
-    private SpriteRenderer sr;
 
     int jumps = 1;
     int tempJumps = 1;
-    int bubbles = 0;
-    int sticks = 0;
-    //bool inAir;
+    bool rocketReady = false;
 
     void Start()
     {
         DontDestroyOnLoad(this);
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
@@ -39,14 +37,10 @@ public class CharacterBehavior : MonoBehaviour
 
 
             if (move > 0)
-            {
-                if (sr.flipX == true) sr.flipX = false;
-            }
+                transform.rotation = Quaternion.Euler(0, 0, 0);
 
             else if (move < 0)
-            {
-                sr.flipX = true;
-            }
+                transform.rotation = Quaternion.Euler(0, 180, 0);
 
             if (Input.GetButtonDown("Jump") && tempJumps != 0)
             {
@@ -59,6 +53,20 @@ public class CharacterBehavior : MonoBehaviour
                     Destroy(particle, 1);
                 }
                 tempJumps--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.S) && !grounded && sticks > 0)
+            {
+                animator.SetTrigger("SwingStick");
+                Debug.Log(sticks.ToString());
+            }
+
+            if(Input.GetKeyDown(KeyCode.LeftShift) && rocketReady)
+            {
+                rb.velocity = new Vector2(move * Time.fixedDeltaTime * 4f * speed, 0);
+                rocketReady = false;
+                StartCoroutine(RocketBoost());
+                StartCoroutine(ResetRocketBoost());
             }
         }
     }
@@ -74,7 +82,23 @@ public class CharacterBehavior : MonoBehaviour
         tempJumps = jumps;
         grounded = true;
         animator.SetBool("InAir", false);
+        animator.SetTrigger("SwingHit");
         return false;
+    }
+
+    IEnumerator RocketBoost()
+    {
+        movement = false;
+        rb.gravityScale = 0;
+        yield return new WaitForSecondsRealtime(0.2f);
+        rb.gravityScale = 3;
+        movement = true;
+    }
+
+    IEnumerator ResetRocketBoost()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        rocketReady = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -97,19 +121,21 @@ public class CharacterBehavior : MonoBehaviour
         {
             switch (collision.gameObject.name)
             {
-                case "Wing":
+                case string x when x.Contains("Wing"):
                     jumps++;
                     break;
-                case "Stick":
+                case string x when x.Contains("Stick"):
                     sticks++;
                     break;
-                case "Bubble":
+                case string x when x.Contains("Bubble"):
                     bubbles++;
+                    break;
+                case string x when x.Contains("Rocket"):
+                    rocketReady = true;
                     break;
                 default:
                     break;
             }
-
             Destroy(collision.gameObject);
         }
 
