@@ -8,11 +8,16 @@ public class Delete_Projectile : MonoBehaviour
 
     void Start()
     {
-        Destroy(this.gameObject, decayTime);
+        Destroy(gameObject, decayTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
     }
 }

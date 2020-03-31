@@ -6,24 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D collision)
+    void Awake()
     {
-        //GameObject player = PlayerStats.p.player;
-        GameObject player = GameObject.Find("Player");
-
-        if (gameObject.name.Contains("Cutscene"))
-             player.SetActive(false);
-
-        else
-        {
-            player.SetActive(true);
-            player.transform.position = GameObject.Find("SpawnPoint").transform.position;
-        }
-
         GameObject levelName = GameObject.Find("LevelName");
         if (levelName != null)
-            levelName.GetComponent<Text>().text = gameObject.name;
+            levelName.GetComponent<Text>().text = SceneManager.GetActiveScene().name;
+    }
 
-        SceneManager.LoadScene(gameObject.name);
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        StartCoroutine(LoadLevel());
+    }
+
+    IEnumerator LoadLevel()
+    {
+        GetComponent<Animator>().SetTrigger("Fade");
+        yield return new WaitForSeconds(1f);
+        GameObject player = GameObject.Find("Player");
+        Destroy(player.gameObject);
+        PlayerPrefs.SetString("NextLevel", gameObject.name);
+        PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Level_Complete");
     }
 }

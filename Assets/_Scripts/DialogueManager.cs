@@ -52,6 +52,7 @@ public class DialogueManager : MonoBehaviour
             GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = false;
         DisplayNextSentence();
         dialogueActive = true;
+        PlayerPrefs.SetString("Choice", "");
     }
 
     public void DisplayNextSentence()
@@ -100,6 +101,7 @@ public class DialogueManager : MonoBehaviour
 
         next.SetActive(true);
         skip.SetActive(true);
+        PlayerPrefs.SetString("Choice", GameObject.Find("Choice 1").GetComponent<Text>().text);
         choice_1.SetActive(false);
         choice_2.SetActive(false);
     }
@@ -111,6 +113,7 @@ public class DialogueManager : MonoBehaviour
 
         next.SetActive(true);
         skip.SetActive(true);
+        PlayerPrefs.SetString("Choice", GameObject.Find("Choice 2").GetComponent<Text>().text);
         choice_1.SetActive(false);
         choice_2.SetActive(false);
     }

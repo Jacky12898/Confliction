@@ -3,41 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject player;
-
-    void Start()
-    {
-        
-    }
-
     public void NewGame()
     {
-        player = PlayerStats.p.player;
-        player.SetActive(true);
         SceneManager.LoadScene("Tutorial");
-        player.transform.position = new Vector3(-3.5f,3.5f,0);
-        player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
-        
         GameObject levelName = GameObject.Find("LevelName");
         if (levelName != null)
             levelName.GetComponent<Text>().text = "Tutorial";
-
-        PlayerStats.p.Reset();
     }
     public void LevelSelect()
     {
-        SceneManager.LoadScene("Level Select");
+        SceneManager.LoadScene("LevelSelect");
     }
     public void Quit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("NextLevel"));
+    }
+
+    public void SelectLevel()
+    {
+        SceneManager.LoadScene(EventSystem.current.currentSelectedGameObject.name);
     }
 }
