@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &131941713
+--- !u!1 &142879320
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,10 +129,104 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 131941714}
-  - component: {fileID: 131941717}
-  - component: {fileID: 131941716}
-  - component: {fileID: 131941715}
+  - component: {fileID: 142879323}
+  - component: {fileID: 142879322}
+  - component: {fileID: 142879321}
+  m_Layer: 0
+  m_Name: CutsceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &142879321
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142879320}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e672b09b8fbeac5469b5962c3c61ac6c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &142879322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142879320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956ae83d65c22ad4dafbbb794685a41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
+  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
+  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
+  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
+  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
+  dialogues:
+  - name: Moful
+    sentences:
+    - Whew, we finally made it through all those ants!
+    - This looks like the throne to the queen ant...
+  - name: ???
+    sentences:
+    - Gwwwaaaaarrrrr!!!!
+  - name: Moful
+    sentences:
+    - Eeeekkk!!!!!
+  - name: 
+    sentences:
+    - '*Insert epic boss battle here'
+    - After the victory against The Gyne, you and Moful release a sigh of relief.
+    - All the ants of the anthill recede into chaos.
+    - Without a queen, the ants don't know how to act.
+    - You and Moful make the long trek back to Mochigome and return to the village
+    - When you return to the village with the news, everyone rejoices in the fact
+      that they won't be living in fear anymore.
+    - ' Everyone celebrates and continues on living a wonderful, fearfree life!'
+  nextScene: MainMenu
+  playerPrefName: 
+  playerPrefValue: 
+--- !u!4 &142879323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142879320}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1428960627}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1428960626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1428960627}
+  - component: {fileID: 1428960630}
+  - component: {fileID: 1428960629}
+  - component: {fileID: 1428960628}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -140,27 +234,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &131941714
+--- !u!4 &1428960627
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131941713}
+  m_GameObject: {fileID: 1428960626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 312532337}
+  m_Father: {fileID: 142879323}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &131941715
+--- !u!114 &1428960628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131941713}
+  m_GameObject: {fileID: 1428960626}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
@@ -185,21 +279,21 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &131941716
+--- !u!81 &1428960629
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131941713}
+  m_GameObject: {fileID: 1428960626}
   m_Enabled: 1
---- !u!20 &131941717
+--- !u!20 &1428960630
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131941713}
+  m_GameObject: {fileID: 1428960626}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -236,86 +330,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &312532334
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 312532337}
-  - component: {fileID: 312532336}
-  - component: {fileID: 312532335}
-  m_Layer: 0
-  m_Name: CutsceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &312532335
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312532334}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e672b09b8fbeac5469b5962c3c61ac6c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &312532336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312532334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 956ae83d65c22ad4dafbbb794685a41a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animations:
-  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
-  - {fileID: 7400000, guid: b8b36d8e793467b4a94fc5a73a642902, type: 2}
-  dialogues:
-  - name: 
-    sentences:
-    - 'You proceed to absorb the void and become a massive rampaging shadow. '
-    - 'Quickly your heightened instincts detect the location of Motheanthill. '
-    - And you fly there at immesurable speed
-    - 'In a burst of rage, you devour the ants whole, one by one, including the queen. '
-    - Then you return to the Abyssal Pit, where you reside for the rest of eternity,
-      forever without contact.
-  nextScene: MainMenu
-  playerPrefName: 
-  playerPrefValue: 
---- !u!4 &312532337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312532334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 131941714}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &605354755
+--- !u!1001 &2055172282
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

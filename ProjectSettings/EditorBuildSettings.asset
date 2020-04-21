@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/MainMenu.unity
     guid: 345cb201325c97e4b9932f14e4a32817
   - enabled: 1
-    path: Assets/_Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/_Scenes/Tutorial.unity
     guid: abd4c8c78adcd974d80c3442ffecbd42
   - enabled: 1
@@ -21,8 +18,80 @@ EditorBuildSettings:
     path: Assets/_Scenes/LevelSelect.unity
     guid: bee8bfe94fb793b4cbf2d68c073b9ce1
   - enabled: 1
+    path: Assets/_Scenes/Level S-0 Cutscene.unity
+    guid: ca140cc35118bbf4f8b18d474c076895
+  - enabled: 1
+    path: Assets/_Scenes/Level S-0 Cutscene 2.unity
+    guid: 418de8a0c22d86b4b9c676184111ce63
+  - enabled: 1
+    path: Assets/_Scenes/Level S-0 Cutscene 3.unity
+    guid: 9cd56585a247a404ab3a9a80ad325d20
+  - enabled: 1
+    path: Assets/_Scenes/Store.unity
+    guid: 9fd58d0c40eb11a41b82d553160da183
+  - enabled: 1
+    path: Assets/_Scenes/House.unity
+    guid: cb2da798268790440a73160d02a18cd0
+  - enabled: 1
+    path: Assets/_Scenes/Level S-1 Cutscene.unity
+    guid: 63c5f865f1dbd974196a1ede28b19beb
+  - enabled: 1
+    path: Assets/_Scenes/Might as well give it a try.unity
+    guid: 01985c847ce7a024d9e374ba84e3ac18
+  - enabled: 1
+    path: Assets/_Scenes/Level S-1.unity
+    guid: 344bc2a46dcac8648917636b2fcffbf1
+  - enabled: 1
+    path: Assets/_Scenes/Level S-2.unity
+    guid: 663c5d02ff666af44b171e1d435dca90
+  - enabled: 1
+    path: Assets/_Scenes/Level S-3.5.unity
+    guid: 42bc49e1cf7a75848a0ccb5dde2bab27
+  - enabled: 1
+    path: Assets/_Scenes/Level S-3.unity
+    guid: 05dc7a92e9e792f4891a6ec4c4858eae
+  - enabled: 1
+    path: Assets/_Scenes/Level S-4.unity
+    guid: 7010eff050db89d4ea5c8bb3a1cab4c7
+  - enabled: 1
+    path: Assets/_Scenes/Level S-5.unity
+    guid: 40f4d989729938a43b39ff1f069edb5a
+  - enabled: 1
+    path: Assets/_Scenes/Level S-6.unity
+    guid: 403d1fc122d89524f8aa0c0562034afe
+  - enabled: 1
+    path: Assets/_Scenes/Level S-7.unity
+    guid: f1116f4dec6edab43a6748b0b7b3bcbb
+  - enabled: 1
+    path: Assets/_Scenes/Level S-8.unity
+    guid: 3849f142dc5e17b48845f6bb379662f5
+  - enabled: 1
+    path: Assets/_Scenes/Don't help old man.unity
+    guid: 4836d1257fb4db94b8cb09e1d3059f4c
+  - enabled: 1
+    path: Assets/_Scenes/Help old man.unity
+    guid: 6ffd641dc4aa4684fa0d9920cd349d26
+  - enabled: 1
+    path: Assets/_Scenes/Mochitsuki 2.unity
+    guid: 93629271c523a024197929197d21f9e3
+  - enabled: 1
+    path: Assets/_Scenes/Mochitsuki 3.unity
+    guid: 2cb376069751dbb4e9cf7a2f8833515c
+  - enabled: 1
+    path: Assets/_Scenes/Mochitsuki.unity
+    guid: edff5776bca588142b37bc3303dbc224
+  - enabled: 1
+    path: Assets/_Scenes/I doubt I can stop an army of ants.unity
+    guid: 81548ccb7fd241a49bad8c3ef4596496
+  - enabled: 1
     path: Assets/_Scenes/Fight Momoney.unity
     guid: 5be42d79b8d41cf4e958896bb154fa20
+  - enabled: 1
+    path: Assets/_Scenes/Momoney_Fight.unity
+    guid: 45ebab291943c6d4eb863fa571d9750e
+  - enabled: 1
+    path: Assets/_Scenes/Gyne.unity
+    guid: 7949893ee85fdcd4da2df0b65ac748ea
   - enabled: 1
     path: Assets/_Scenes/Level A-3 Cutscene.unity
     guid: a7669bf48e9076b42ae5e832be1b4195
@@ -66,36 +135,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/See Mohawk.unity
     guid: 6a65cff4a76554344b36fb6edd25bc1f
   - enabled: 1
-    path: Assets/_Scenes/Level S-0 Cutscene.unity
-    guid: ca140cc35118bbf4f8b18d474c076895
-  - enabled: 1
-    path: Assets/_Scenes/Level S-1.unity
-    guid: 344bc2a46dcac8648917636b2fcffbf1
-  - enabled: 1
-    path: Assets/_Scenes/Don't help old man.unity
-    guid: 4836d1257fb4db94b8cb09e1d3059f4c
-  - enabled: 1
-    path: Assets/_Scenes/Help old man.unity
-    guid: 6ffd641dc4aa4684fa0d9920cd349d26
-  - enabled: 1
-    path: Assets/_Scenes/Mochitsuki 2.unity
-    guid: 93629271c523a024197929197d21f9e3
-  - enabled: 1
-    path: Assets/_Scenes/Mochitsuki 3.unity
-    guid: 2cb376069751dbb4e9cf7a2f8833515c
-  - enabled: 1
-    path: Assets/_Scenes/Mochitsuki.unity
-    guid: edff5776bca588142b37bc3303dbc224
-  - enabled: 1
-    path: Assets/_Scenes/Level S-2.unity
-    guid: 663c5d02ff666af44b171e1d435dca90
-  - enabled: 1
-    path: Assets/_Scenes/House.unity
-    guid: cb2da798268790440a73160d02a18cd0
-  - enabled: 1
-    path: Assets/_Scenes/I doubt I can stop an army of ants.unity
-    guid: 81548ccb7fd241a49bad8c3ef4596496
-  - enabled: 1
     path: Assets/_Scenes/Level B.unity
     guid: 990f49dde3d7fc14a8a51add838b6dc6
   - enabled: 1
@@ -108,50 +147,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/Level D-2.unity
     guid: 4c9cfcaa3218313469e7fbd73642c598
   - enabled: 1
-    path: Assets/_Scenes/Level S-0 Cutscene 2.unity
-    guid: 418de8a0c22d86b4b9c676184111ce63
-  - enabled: 1
-    path: Assets/_Scenes/Level S-0 Cutscene 3.unity
-    guid: 9cd56585a247a404ab3a9a80ad325d20
-  - enabled: 1
-    path: Assets/_Scenes/Level S-1 Cutscene.unity
-    guid: 63c5f865f1dbd974196a1ede28b19beb
-  - enabled: 1
-    path: Assets/_Scenes/Might as well give it a try.unity
-    guid: 01985c847ce7a024d9e374ba84e3ac18
-  - enabled: 1
     path: Assets/_Scenes/Momoney.unity
     guid: c5b10afa74a67484e929a33d5f23bfca
   - enabled: 1
     path: Assets/_Scenes/Monster.unity
     guid: a363e4ffe21ad31459e4bd4b822bbff9
-  - enabled: 1
-    path: Assets/_Scenes/Store.unity
-    guid: 9fd58d0c40eb11a41b82d553160da183
-  - enabled: 1
-    path: Assets/_Scenes/Test.unity
-    guid: bebf2913d75d92c4792acae1f2aeb390
-  - enabled: 1
-    path: Assets/_Scenes/Level S-3.5.unity
-    guid: 42bc49e1cf7a75848a0ccb5dde2bab27
-  - enabled: 1
-    path: Assets/_Scenes/Level S-3.unity
-    guid: 05dc7a92e9e792f4891a6ec4c4858eae
-  - enabled: 1
-    path: Assets/_Scenes/Level S-4.unity
-    guid: 7010eff050db89d4ea5c8bb3a1cab4c7
-  - enabled: 1
-    path: Assets/_Scenes/Level S-5.unity
-    guid: 40f4d989729938a43b39ff1f069edb5a
-  - enabled: 1
-    path: Assets/_Scenes/Level S-6.unity
-    guid: 403d1fc122d89524f8aa0c0562034afe
-  - enabled: 1
-    path: Assets/_Scenes/Level S-7.unity
-    guid: f1116f4dec6edab43a6748b0b7b3bcbb
-  - enabled: 1
-    path: Assets/_Scenes/Level S-8.unity
-    guid: 3849f142dc5e17b48845f6bb379662f5
   - enabled: 1
     path: Assets/_Scenes/Level A-1.unity
     guid: 4f9d4b7849ca60f4c8b598b98cff4ce3

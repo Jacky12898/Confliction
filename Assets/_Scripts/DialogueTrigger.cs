@@ -16,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
         if(collision.tag == "Player")
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            GameObject.Find("Player").GetComponent<CharacterBehavior>().inDialogue = true;
             Destroy(this.gameObject);
         }
     }

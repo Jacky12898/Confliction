@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
 
+    bool isChoice = false;
+
     void Start()
     {
         dialogueBox.SetActive(false);
@@ -26,10 +28,9 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isChoice)
             DisplayNextSentence();
-
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isChoice)
             EndDialogue();
     }
 
@@ -86,7 +87,7 @@ public class DialogueManager : MonoBehaviour
     {
         next.SetActive(false);
         skip.SetActive(false);
-
+        isChoice = true;
         choice_1.SetActive(true);
         choice_2.SetActive(true);
         choice_1.GetComponent<Text>().text = sentence.Substring(1, sentence.IndexOf('/') - 1);
@@ -125,6 +126,9 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueActive = false;
         if (GameObject.Find("Player") != null)
+        {
             GameObject.Find("Player").GetComponent<CharacterBehavior>().movement = true;
+            GameObject.Find("Player").GetComponent<CharacterBehavior>().inDialogue = false;
+        }
     }
 }

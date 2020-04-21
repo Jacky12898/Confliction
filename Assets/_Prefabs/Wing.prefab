@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9111460127986800821}
   - component: {fileID: 9111460127986800820}
   - component: {fileID: 9111460127986800825}
-  - component: {fileID: 9111460127986800830}
   - component: {fileID: 1939050480}
   m_Layer: 0
   m_Name: Wing
@@ -4844,22 +4843,6 @@ PolygonCollider2D:
       - {x: 0.13321209, y: -0.382164}
       - {x: 0.4297638, y: -0.37110138}
       - {x: 0.23193264, y: -0.20636988}
---- !u!114 &9111460127986800830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111460127986800823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 665090a24d8ea4c4bb54393de6572c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: You got a Wing!
-    sentences:
-    - Now you have an extra jump at your disposal!
 --- !u!114 &1939050480
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class MenuManager : MonoBehaviour
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 
     public void NextLevel()
@@ -36,5 +37,18 @@ public class MenuManager : MonoBehaviour
     public void SelectLevel()
     {
         SceneManager.LoadScene(EventSystem.current.currentSelectedGameObject.name);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
+
+    public void Resume()
+    {
+        GameObject pauseMenu = GameObject.Find("PauseMenu");
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 }

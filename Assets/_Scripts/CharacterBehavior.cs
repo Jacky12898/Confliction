@@ -31,18 +31,41 @@ public class CharacterBehavior : MonoBehaviour
     int jumps = 1;
     int tempJumps = 1;
     bool rocketReady = false;
+    public GameObject pause;
+    public bool inDialogue = false;
+    bool doneWithDialogue = false;
 
     void Start()
     {
-        DontDestroyOnLoad(this);
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         soundController = transform.GetChild(3).GetComponent<AudioSource>();
+        pause.SetActive(false);
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && doneWithDialogue)
+        {
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                pause.SetActive(true);
+            }
+            else if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                pause.SetActive(false);
+            }
+        }
+
+        if (inDialogue == false)
+            doneWithDialogue = true;
+
+        else
+            doneWithDialogue = false;
+
         if(movement == true)
         {
             checkInAir();

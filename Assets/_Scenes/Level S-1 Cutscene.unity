@@ -184,6 +184,8 @@ MonoBehaviour:
     - Oh. Okay. Yeah you're right, it isn't an easy task. Sorry for overstepping
       my boundaries. Let's head back to the village!
   nextScene: Level S-1
+  playerPrefName: 
+  playerPrefValue: 
 --- !u!4 &29957647
 Transform:
   m_ObjectHideFlags: 0
@@ -4449,7 +4451,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5316189389918529472, guid: 39cb11f9b6df69f47b167a6102786e86,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4531,7 +4533,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 6271674672454095231, guid: 06d339e87df200d43aa35940128708e6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
